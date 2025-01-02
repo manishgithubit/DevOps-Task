@@ -10,27 +10,34 @@ Prerequisites
 - kubectl installed
 
 Create an EKS cluster using the AWS CLI:
+
 aws eks create-cluster --name my-cluster --role-arn arn:aws:iam::123456789012:role/eks-service-role
 
 Wait for the cluster to be created:
+
  aws eks describe-cluster --name my-cluster --query 'cluster.status'
 
 Update the kubeconfig file:
+
 aws eks update-kubeconfig --name my-cluster --region us-west-2
 
 Build the Docker image:
+
 docker build -t my-nodejs-service .
 
 Push the Docker image to Docker Hub:
+
 docker tag my-nodejs-service:latest <your-docker-hub-username>/my-nodejs-service:latest
 docker push <your-docker-hub-username>/my-nodejs-service:latest
 
 Create a new file called deployment.yaml 
 
 Apply the deployment YAML file:
+
 kubectl apply -f deployment.yaml
 
 Verify that the deployment is running:
+
 kubectl get deployments
 
 
