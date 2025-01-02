@@ -18,13 +18,9 @@ Prerequisites
 
 * Build the Docker image:  docker build -t my-nodejs-service .
 
-* Push the Docker image to Docker Hub:  docker tag my-nodejs-service:latest <your-docker-hub-username>/my-nodejs-service:latest
+* Push the Docker image to Docker Hub:  docker tag my-nodejs-service:latest <your-docker-hub-username>/my-nodejs-service:latest and docker push <your-docker-hub-username>/my-nodejs-service:latest
 
-* docker push <your-docker-hub-username>/my-nodejs-service:latest
-
-* Create a new file called deployment.yaml 
-
-* Apply the deployment YAML file:  kubectl apply -f deployment.yaml
+* Create a new file called deployment.yaml and Apply the deployment YAML file:  kubectl apply -f deployment.yaml
 
 * Verify that the deployment is running:  kubectl get deployments
 
