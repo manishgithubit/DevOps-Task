@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-nodejs-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-nodejs-service
+  template:
+    metadata:
+      labels:
+        app: my-nodejs-service
+    spec:
+      containers:
+      - name: my-nodejs-service
+        image: <your-docker-hub-username>/my-nodejs-service:latest
+        ports:
+        - containerPort: 3000
