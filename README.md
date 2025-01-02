@@ -22,26 +22,22 @@ aws eks describe-cluster --name my-cluster --query 'cluster.status'
 
 aws eks update-kubeconfig --name my-cluster --region us-west-2
 
-# Create a new file called server.js
-
-# Create a new file called Dockerfile 
-
-# Build the Docker image:
+4. Build the Docker image:
 
 docker build -t my-nodejs-service .
 
-# Push the Docker image to Docker Hub:
+5. Push the Docker image to Docker Hub:
 
 docker tag my-nodejs-service:latest <your-docker-hub-username>/my-nodejs-service:latest
 docker push <your-docker-hub-username>/my-nodejs-service:latest
 
-# Create a new file called deployment.yaml 
+Create a new file called deployment.yaml 
 
-# Apply the deployment YAML file:
+Apply the deployment YAML file:
 
 kubectl apply -f deployment.yaml
 
-# Verify that the deployment is running:
+Verify that the deployment is running:
 
 kubectl get deployments
 
@@ -132,7 +128,8 @@ To provide an SSL certificate for the service, I would use a combination of the 
 
 - External Certificate Management Tools: Other external certificate management tools such as AWS Certificate Manager or Google Cloud Certificate Manager can also be used to obtain and manage SSL/TLS certificates.
 
-Improving the Solution
+# Improving the Solution
+
 To improve the solution, I would consider the following:
 
 - Implementing a more robust monitoring and logging solution: Implementing a more robust monitoring and logging solution such as Prometheus, Grafana, or ELK Stack would provide better insights into the application's performance and help identify issues earlier.
