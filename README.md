@@ -8,6 +8,7 @@ Prerequisites
 - AWS account
 - AWS CLI installed
 - kubectl installed
+- Docker installed
 
 
 * Create an EKS cluster using the AWS CLI: aws eks create-cluster --name my-cluster --role-arn arn:aws:iam::123456789012:role/eks-service-role
