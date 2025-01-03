@@ -1,7 +1,3 @@
-
-Here is the Jenkinsfile:
-
-
 // Define a pipeline with multiple stages
 pipeline {
     // Use any available agent to run the pipeline
