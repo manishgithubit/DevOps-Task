@@ -92,8 +92,6 @@ To store and deploy secrets such as API keys, I would use a combination of the f
 - External Secret Management Tools:
   Other external secret management tools such as AWS Secrets Manager, Google Cloud Secret Manager, or Azure Key Vault can also be used to store and manage secrets.
 
-To deploy secrets, I would use Kubernetes' built-in secret management feature to create secrets and then mount them as environment variables or files within containers.
-
 # d. Testing Infrastructure Scalability
 
 To test how well the infrastructure scales when many requests come in, I would use a combination of the following tools and techniques:
